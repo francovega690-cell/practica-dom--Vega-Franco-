@@ -1,1 +1,23 @@
-
+* {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  background-color: cadetblue;
+  text-align: center;
+  padding: 30px;
+  font-size: 30px;
+}
+h2 {
+  background-color: red;
+  padding: 30px;
+  text-align: center;
+  font-size: 30px;
+}
+body {
+  background-image: url(https://imgs.search.brave.com/siLVPezPbRBuSEBY39_lQ6MjeN_1JeeVO6PNWyY-MFA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMi8w/Ni8wOC8wNS80Ny9z/dGFycy03MjQ5Nzg1/XzY0MC5qcGc);
+  size: cover;
+}
+footer {
+  background-color: white;
+}
