@@ -94,3 +94,17 @@ btnAgregarHeroe.addEventListener("click", () => {
   nombreHeroe.value = "";
   urlHeroe.value = "";
 });
+rowContainer.addEventListener("click", (e) => {
+  if (e.target.classList.contains("btn-eliminar")) {
+    const card = e.target.closest(".col-3");
+    const id = Number(card.dataset.id);
+
+    const indice = personajes.findIndex((p) => p.id === id);
+
+    if (indice !== -1) {
+      personajes.splice(indice, 1);
+    }
+
+    cargarPersonajes(personajes);
+  }
+});
