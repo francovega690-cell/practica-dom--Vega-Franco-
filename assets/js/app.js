@@ -73,3 +73,24 @@ buscador.addEventListener("input", (e) => {
 
   cargarPersonajes(filtrados);
 });
+btnAgregarHeroe.addEventListener("click", () => {
+  const nombre = nombreHeroe.value;
+  const imagen = urlHeroe.value;
+
+  personajes.push({
+    id: personajes.length + 1,
+    nombre: nombre,
+    imagen: imagen,
+  });
+
+  cargarPersonajes(personajes);
+
+  const modal = bootstrap.Modal.getOrCreateInstance(
+    document.getElementById("agregarHeroe"),
+  );
+
+  modal.hide();
+
+  nombreHeroe.value = "";
+  urlHeroe.value = "";
+});

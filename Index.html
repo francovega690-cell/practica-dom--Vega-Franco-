@@ -1,9 +1,11 @@
+html
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lista de Heroes</title>
+    <title>Lista de Personajes Heroes</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,8 +19,17 @@
       <h1>Heroes Unidos</h1>
       <h2>Lista de Heroes</h2>
     </header>
-
-    <nav class="navbar bg-body-tertiary">
+    <div class="container row">
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#agregarHeroe"
+        data-bs-whatever="@getbootstrap"
+      >
+        Añadí tu heroe Favorito aquí!
+      </button>
+      <nav class="navbar bg-body-tertiary">
        <div class="container-fluid">
         <form class="d-flex" role="search" id="formulario">
           <input class="form-control me-2" type="text" id="buscador" placeholder="Buscar" aria-label="Search"/>
@@ -26,7 +37,8 @@
          </form>
        </div>
       </nav>  
-        <div
+
+      <div
         class="modal fade"
         id="agregarHeroe"
         tabindex="-1"
@@ -69,7 +81,7 @@
         </div>
       </div>
     </div>
-       <div class="row mt-2" id="rowContainer">
+    <div class="row mt-2" id="rowContainer">
       <div class="col-3 my-2">
         <!-- <div class="card" style="width: 10rem">
           <img
@@ -86,14 +98,13 @@
         </div>
       </div> -->
     </div>
-
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
     <script src="assets/js/app.js"></script>
+
     <footer>&copy;Derechos de autor reservados</footer>
   </body>
 </html>
