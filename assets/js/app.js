@@ -60,3 +60,16 @@ const cargarPersonajes = (arregloDePersonajes) => {
   });
 };
 cargarPersonajes(personajes);
+const buscador = document.querySelector("#buscador");
+
+buscador.addEventListener("input", (e) => {
+  console.log("Texto:", e.target.value);
+
+  const filtrados = personajes.filter((personaje) =>
+    personaje.nombre.toLowerCase().includes(e.target.value.toLowerCase()),
+  );
+
+  console.log(filtrados);
+
+  cargarPersonajes(filtrados);
+});
